@@ -13,5 +13,7 @@
 
 @property(nonatomic, strong) GADInterstitial* interstitial;
 
+- (IBAction)showAd:(id)sender;
+
 @end
 

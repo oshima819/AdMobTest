@@ -18,10 +18,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-xxxxxxxxxxxxxxxx/xxxxxxxxxx"];
+    _interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-8734842466864822/9798788397"];
     _interstitial.delegate = self;
     GADRequest *request = [GADRequest request];
     [_interstitial loadRequest:request];
+}
+
+- (IBAction)showAd:(id)sender {
+    if([self.interstitial isReady]){
+        
+        [self.interstitial presentFromRootViewController:self];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
